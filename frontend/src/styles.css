@@ -1,0 +1,97 @@
+:root {
+  --bg: #f6f6ef;
+  --fg: #222;
+  --muted: #828282;
+  --accent: #ff6600;
+  --link: #000;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.4 Verdana, Geneva, sans-serif;
+}
+
+.app { max-width: 800px; margin: 0 auto; }
+
+.topbar {
+  background: var(--accent);
+  padding: 4px 8px;
+}
+.topbar h1 {
+  margin: 0;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+
+main { padding: 8px; }
+
+/* Feed tabs */
+.feeds { margin-bottom: 8px; }
+.feed {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  text-transform: capitalize;
+  padding: 2px 6px;
+  font: inherit;
+}
+.feed.active { color: var(--fg); font-weight: bold; }
+
+/* Story list */
+.stories { list-style: none; margin: 0; padding: 0; }
+.story { display: flex; gap: 6px; padding: 4px 0; align-items: baseline; }
+.rank { color: var(--muted); min-width: 24px; text-align: right; }
+.story-title a, .story-title .linklike { color: var(--link); }
+.story-title { font-size: 14px; }
+.domain { color: var(--muted); font-size: 12px; }
+.story-meta { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.linklike {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+.linklike:hover { text-decoration: underline; }
+
+.more, .back {
+  margin: 10px 0;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  padding: 4px 0;
+}
+.more:hover, .back:hover { text-decoration: underline; }
+
+.muted { color: var(--muted); font-size: 12px; }
+.error { color: #c00; }
+
+/* Detail */
+.detail-title { font-size: 16px; margin: 6px 0 2px; }
+.story-text { margin: 8px 0; }
+
+/* Comments */
+.comment-tree, .comment-kids { list-style: none; padding-left: 16px; }
+.comment-tree { padding-left: 0; margin-top: 12px; }
+.comment { margin: 8px 0; }
+.comment-head { font-size: 12px; }
+.comment-text { margin: 4px 0; }
+.comment-text p { margin: 4px 0; }
+.toggle {
+  background: none; border: none; cursor: pointer;
+  color: var(--muted); font: inherit; padding: 0;
+}
